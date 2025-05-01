@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Instructional Material</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark text-light p-0">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center me-4">
+                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                    <small>P.I Garcia, Naval, Biliran, 6543, Biliran Province State Univeristy</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+   <!-- Navbar Start -->
+   <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+    <a href="index.html" class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5">
+      <h2 class="m-0 d-flex align-items-center">
+        <img src="img/STED Logo.png" alt="Filipino Icon" class="me-2" style="width: 60px; height: 60px;">
+        FILIPINO 8
+      </h2>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="index.html" class="nav-item nav-link">Home</a>
+            <a href="about.html" class="nav-item nav-link">About</a>
+            <a href="lessons.html" class="nav-item nav-link">Lessons</a>
+            <a href="assesment.html" class="nav-item nav-link">Assessment</a>
+            <a href="Our Team.html" class="nav-item nav-link">Our Team</a>
+</nav>
+<!-- Navbar End -->
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-2 my-3 mt-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container text-center">
+            <h1 class="display-4 text-white animated slideInDown mb-4">Assessment</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+      <style>
+        body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          background: #f4f7f8;
+
+          color: #333;
+        }
+    
+        .quiz-container {
+          max-width: 700px;
+          margin: auto;
+          background: #fff;
+          padding: 30px 40px;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+          border-radius: 8px;
+        }
+    
+        h2 {
+          text-align: center;
+          margin-bottom: 30px;
+          color: #2c3e50;
+        }
+    
+        .question {
+          margin-bottom: 25px;
+        }
+    
+        .question p {
+          font-size: 18px;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+    
+        label {
+          display: block;
+          margin: 6px 0;
+          cursor: pointer;
+        }
+    
+        input[type="radio"] {
+          margin-right: 10px;
+        }
+    
+        .answer {
+          margin-top: 10px;
+          font-weight: bold;
+          display: none;
+          padding: 10px;
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+    
+        .correct {
+          background-color: #e0f9e0;
+          color: #27ae60;
+          border-left: 5px solid #2ecc71;
+        }
+    
+        .wrong {
+          background-color: #fce8e6;
+          color: #c0392b;
+          border-left: 5px solid #e74c3c;
+        }
+    
+        .icon {
+          font-size: 20px;
+          line-height: 1;
+        }
+    
+        .btn-container {
+          text-align: center;
+          margin-top: 30px;
+        }
+    
+        .submit-btn,
+        .retry-btn {
+          background-color: #3498db;
+          color: #fff;
+          padding: 12px 25px;
+          font-size: 16px;
+          border: none;
+          border-radius: 6px;
+          cursor: pointer;
+          margin: 5px;
+          transition: background 0.3s;
+        }
+    
+        .submit-btn:hover,
+        .retry-btn:hover {
+          background-color: #2980b9;
+        }
+    
+        .score {
+          font-size: 20px;
+          font-weight: bold;
+          margin-top: 20px;
+          text-align: center;
+          color: #2c3e50;
+        }
+    
+      </style>
+    </head>
+    <body>
+    
+      <div class="quiz-container">
+    
+        <form id="quizForm">
+    
+          <div class="question" id="q1">
+            <p>1. .“Ang kanyang mga salita ay parang matamis na lason.” Ano ang ibig sabihin nito?</p>
+            <label><input type="radio" name="q1" value="a"> Nakakalason ang kanyang mga salita.</label>
+            <label><input type="radio" name="q1" value="b"> Nakakatuwa ang kanyang mga salita.</label>
+            <label><input type="radio" name="q1" value="c"> Naghihintay pa rin siya ng bayad sa nangyari.</label>
+            <label><input type="radio" name="q1" value="d"> Nakasulat sa kuwaderno ang mga nangyari.</label>
+            <div class="answer" id="a1"></div>
+          </div>
+    
+          <div class="question" id="q2">
+            <p>2. Sa isang tula na binasa ni Raven, nabasa niya ang taludtod na ito: “Ang buhay ay isang paglalakbay sa dagat ng unos at araw.” Ano ang kahulugan ng matatalinghagang pahayag sa taludtod?</p>
+            <label><input type="radio" name="q2" value="a"> Ang buhay ay parang paglalayag sa dagat na minsang maaraw at minsang maulan.</label>
+            <label><input type="radio" name="q2" value="b"> Ang buhay ay puno ng pagsubok at tagumpay, tulad ng unos at araw sa paglalakbay.</label>
+            <label><input type="radio" name="q2" value="c"> Mahirap ang maglakbay sa dagat kapag may araw at ulan.</label>
+            <label><input type="radio" name="q2" value="d"> Ang paglalakbay sa dagat ay delikado lalo na kung may bagyo.</label>
+            <div class="answer" id="a2"></div>
+          </div>
+    
+          <div class="question" id="q3">
+            <p>3. Habang nagkukuwento si Aling Rita, sinabi niya: “Ang bawat hibla ng kanyang buhok ay kwento ng sakripisyo.” Ano ang kahulugan ng matalinghagang ekspresyong ito?</p>
+            <label><input type="radio" name="q3" value="a"> Mahaba ang buhok ng babae.</label>
+            <label><input type="radio" name="q3" value="b"> May mga kwento ang bawat bahagi ng katawan.</label>
+            <label><input type="radio" name="q3" value="c"> Ang babae ay maraming pinagdaanang hirap at sakripisyo sa buhay.</label>
+            <label><input type="radio" name="q3" value="d"> Ang babae ay maraming pinagdaanang hirap at sakripisyo sa buhay.</label>
+            <div class="answer" id="a3"></div>
+          </div>
+
+
+          <div class="question" id="q4">
+            <p>4. Sa isang tula, ginamit ang "agila" upang ilarawan ang isang pinuno. Ano ang ibig ipahiwatig ng simbolong ito?</p>
+            <label><input type="radio" name="q4" value="a"> Ang pinuno ay palaging lumilipad.</label>
+            <label><input type="radio" name="q4" value="b"> Ang pinuno ay matalas ang mata at may lakas ng loob.</label>
+            <label><input type="radio" name="q4" value="c"> Ang pinuno ay mahilig sa ibon.</label>
+            <label><input type="radio" name="q4" value="d"> Ang pinuno ay may pakpak.</label>
+            <div class="answer" id="a4"></div>
+          </div>
+    
+
+          <div class="question" id="q5">
+            <p>5. "Matagal ko nang inilista sa tubig ang mga nangyari." Ano ang ipinapahiwatig na kahulugan nito? </p>
+            <label><input type="radio" name="q5" value="a"> Nakatatak pa rin sa isipan ang nangyari.</label>
+            <label><input type="radio" name="q5" value="b"> Tuluyan niya nang nakalimutan ang mga nangyari.</label>
+            <label><input type="radio" name="q5" value="c"> Naghihintay pa rin siya ng bayad sa nangyari.</label>
+            <label><input type="radio" name="q5" value="d"> Nakasulat sa kuwaderno ang mga nangyari.</label>
+            <div class="answer" id="a5"></div>
+          </div>
+
+          <div class="question" id="q6">
+            <p>6. Ang paligid ng gubat ay kulay luksa at nakikiayon, sa nakaliliyong masangsang na amoy. </p>
+            <label><input type="radio" name="q6" value="a"> Kakikitaan ng labis na takot at sakit ng katawan</label>
+            <label><input type="radio" name="q6" value="b"> Lumuluha nang walang patid dahil sa labis na dalamhati</label>
+            <label><input type="radio" name="q6" value="c"> Kapaligirang nagsasaad ng labis na kalungkutan, pagkatalo, at kawalang pag-asa</label>
+            <label><input type="radio" name="q6" value="d"> Mga matang maningning at masaya.</label>
+            <div class="answer" id="a6"></div>
+          </div>
+
+          <div class="question" id="q7">
+            <p>7. Kung ginagawa mo ang aking sagisag, dalawa mong mata’y nanalo mong perlas. </p>
+            <label><input type="radio" name="q7" value="a"> Nasira ang kanyang tahanan.</label>
+            <label><input type="radio" name="q7" value="b"> Namatay ang kanyang mahal sa buhay.</label>
+            <label><input type="radio" name="q7" value="c"> Mga matang maningning at masaya.</label>
+            <label><input type="radio" name="q7" value="d"> Kakikitaan ng labis na takot at sakit ng katawan</label>
+            <div class="answer" id="a7"></div>
+          </div>
+
+          <div class="question" id="q8">
+            <p>8. Sa punong kahoy ay napayukayok, ang liig ay supil ng lubid na gapos. </p>
+            <label><input type="radio" name="q8" value="a"> Kakikitaan ng labis na takot at sakit ng katawan</label>
+            <label><input type="radio" name="q8" value="b"> Nagpapakita ng walang Kalayaan.</label>
+            <label><input type="radio" name="q8" value="c"> Ang mga ina ay palaging umiiyak tuwing may problema.</label>
+            <label><input type="radio" name="q8" value="d"> Kakikitaan ng labis na takot at sakit ng katawan.</label>
+            <div class="answer" id="a8"></div>
+          </div>
+
+          <div class="question" id="q9">
+            <p>9. Bangkay na mistula ang kulay na burok, ng kanyang mukha’y naging putting lubos. </p>
+            <label><input type="radio" name="q9" value="a"> Ang mga ina ay palaging umiiyak tuwing may problema.</label>
+            <label><input type="radio" name="q9" value="b"> Kakikitaan ng labis na takot at sakit ng katawan</label>
+            <label><input type="radio" name="q9" value="c"> Lumuluha nang walang patid dahil sa labis na dalamhati</label>
+            <label><input type="radio" name="q9" value="d"> Nagpapakita ng walang Kalayaan.</label>
+            <div class="answer" id="a9"></div>
+          </div>
+
+          <div class="question" id="q10">
+            <p>10. Nagwikang “O palad” sabay ang pagtulo, sa mata ng luhang anaki’y palaso. </p>
+            <label><input type="radio" name="q10" value="a"> Ang mga ina ay palaging umiiyak tuwing may problema.</label>
+            <label><input type="radio" name="q10" value="b"> Kakikitaan ng labis na takot at sakit ng katawan</label>
+            <label><input type="radio" name="q10" value="c"> Kakikitaan ng labis na takot at sakit ng katawan</label>
+            <label><input type="radio" name="q10" value="d"> Mga matang maningning at masaya.</label>
+            <div class="answer" id="a10"></div>
+          </div>
+    
+          <div class="btn-container">
+            <button type="button" class="submit-btn" onclick="submitQuiz()">Submit Answers</button>
+            <button type="button" class="retry-btn" onclick="resetQuiz()" style="display:none;">Retry Quiz</button>
+          </div>
+    
+          
+        </form>
+    
+        <div class="score" id="scoreSection"></div>
+      </div>
+    
+      <script>
+        const correctAnswers = {
+          q1: "c",
+          q2: "b",
+          q3: "c",
+          q4: "b",
+          q5: "b",
+          q6: "c",
+          q7: "c",
+          q8: "b",
+          q9: "c",
+          q10: "c"
+        };
+    
+        const explanations = {
+          q1: "Tamang Sagot: Naghihintay pa rin siya ng bayad sa nangyari.",
+          q2: "Tamang Sagot: Ang buhay ay puno ng pagsubok at tagumpay, tulad ng unos at araw sa paglalakbay.",
+          q3: "Tamang Sagot: Ang babae ay maraming pinagdaanang hirap at sakripisyo sa buhay.",
+          q4: "Tamang Sagot: Ang pinuno ay matalas ang mata at may lakas ng loob.",
+          q5: "Tamang Sagot: Tuluyan niya nang nakalimutan ang mga nangyari.",
+          q6: "Tamang Sagot: Kapaligirang nagsasaad ng labis na kalungkutan, pagkatalo, at kawalang pag-asa",
+          q7: "Tamang Sagot: Mga matang maningning at masaya.",
+          q8: "Tamang Sagot: Nagpapakita ng walang Kalayaan.",
+          q9: "Tamang Sagot: Lumuluha nang walang patid dahil sa labis na dalamhati",
+          q10: "Tamang Sagot: Kakikitaan ng labis na takot at sakit ng katawan"
+        };
+    
+        function submitQuiz() {
+          let score = 0;
+          let total = Object.keys(correctAnswers).length;
+    
+          for (let q in correctAnswers) {
+            const radios = document.getElementsByName(q);
+            let selected = null;
+            for (const radio of radios) {
+              if (radio.checked) {
+                selected = radio.value;
+                break;
+              }
+            }
+    
+            const answerDiv = document.getElementById('a' + q.charAt(1));
+        answerDiv.innerHTML = ""; // clear previous content
+
+        const iconSpan = document.createElement("span");
+        iconSpan.classList.add("icon");
+
+        const textSpan = document.createElement("span");
+
+        if (selected === correctAnswers[q]) {
+          score++;
+          iconSpan.textContent = "✅";
+          textSpan.textContent = explanations[q];
+          answerDiv.className = "answer correct";
+        } else if (selected) {
+          iconSpan.textContent = "❌";
+          textSpan.textContent = `Incorrect. ${explanations[q]}`;
+          answerDiv.className = "answer wrong";
+        } else {
+          iconSpan.textContent = "❌";
+          textSpan.textContent = `No answer selected. ${explanations[q]}`;
+          answerDiv.className = "answer wrong";
+        }
+
+        answerDiv.appendChild(iconSpan);
+        answerDiv.appendChild(textSpan);
+        answerDiv.style.display = "flex";
+      }
+
+      document.getElementById("scoreSection").innerText = `You scored ${score} out of ${total}.`;
+      document.querySelector(".submit-btn").style.display = "none";
+      document.querySelector(".retry-btn").style.display = "inline-block";
+    }
+
+    function resetQuiz() {
+      const inputs = document.querySelectorAll("input[type='radio']");
+      inputs.forEach(input => input.checked = false);
+
+      const answers = document.querySelectorAll(".answer");
+      answers.forEach(div => {
+        div.style.display = "none";
+        div.innerHTML = "";
+        div.className = "answer";
+      });
+
+      document.getElementById("scoreSection").innerText = "";
+      document.querySelector(".submit-btn").style.display = "inline-block";
+      document.querySelector(".retry-btn").style.display = "none";
+    }
+  </script><br><br><br><br><br><br>
+    
+      <div>
+         <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer my-2 mb-0 py- wow fadeIn" data-wow-delay="0.1s">
+      <div class="container">
+          <div class="row g-5">
+              <div class="col-lg-3 col-md-6">
+                  <h4 class="text-white mb-4">Get In Touch</h4>
+                  <h2 class="text-primary mb-4"><i class="fa fa-school text-white me-2"></i>STED-BiPSU</h2>
+                  <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>P.I Garcia, Naval, Biliran</p>
+                  <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>09815467802</p>
+                  <p class="mb-2"><i class="fa fa-envelope me-3"></i>althea.tumanda@bipsu.edu.ph<br><br></p>
+              </div>
+              <div class="col-lg-2 col-md-10">
+              </div>
+              <div class="col-lg-3 col-md-6">
+                  <img src="img/Logo BiPSU.png" class="me-2" style="width: 200px; height: 200px;">
+              </div>
+              <div class="col-lg-3 col-md-7" style="margin-left: auto;">
+                  <h4 class="text-light mb-4">Quick Links</h4>
+                  <a class="btn btn-link" href="about.html">About Us</a>
+                  <a class="btn btn-link" href="Sources.html">Sources<br><br></a>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Footer End -->
+
+   <!-- Copyright Start -->
+   <div class="container-fluid copyright text-light py-4 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                &copy; <a href="">BSED FILIPINO 3A</a>, All Right Reserved 2025.
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
