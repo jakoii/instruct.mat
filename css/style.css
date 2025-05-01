@@ -349,3 +349,19 @@
 .copyright a:hover {
     color: var(--light);
 }
+
+.center {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .responsive-img {
+      width: 100%;
+      max-width: 850px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    h2 {
+      font-family: Arial, sans-serif;
+    }
